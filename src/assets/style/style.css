@@ -35,10 +35,6 @@ p, li {
   background-image: url();
   background-size: cover;
   background-position: center;
-  --mask: linear-gradient(to bottom,
-      rgba(0,0,0, 1) 0, rgba(0,0,0, 1) 98%,
-      rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
-  ) 50% 10% / 100% 100% repeat-x;
   font: 2em/1.6em Arial;
   -webkit-mask: var(--mask);
   mask: var(--mask);
@@ -107,17 +103,19 @@ main nav li {
   border-bottom: 1px solid aliceblue;
   text-transform: uppercase;
 }
+main nav a {
+  scroll-behavior: smooth;
+}
 main .content {
   margin-left: 300px;
   width: 80%;
   display: block;
   overflow-y: scroll;
   height: 950px;
-}
-main .content div {
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 main .content .synopsis {
+  margin-bottom: 800px;
   /* From https://css.glass */
   border-radius: 4px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -171,4 +169,42 @@ main .content .synopsis .synopsis-bg .slider .slide-track {
 main .content .synopsis .synopsis-bg .slider .slide {
   height: 200px;
   width: 250px;
+}
+main .content .factions {
+  border: 1px solid gold;
+  padding: 40px;
+}
+main .content .factions em {
+  color: aliceblue;
+}
+main .content .factions .faction-gallery {
+  display: flex;
+}
+main .content .factions .faction-gallery .faction-info {
+  display: block;
+}
+main .content .factions .faction-gallery .faction-info .contact-name {
+  height: 80px;
+  border: 1px solid saddlebrown;
+  padding: 8px;
+}
+main .content .factions .faction-gallery .faction-info .faction-name {
+  height: 140px;
+  width: 400px;
+  border: 1px solid white;
+  padding: 8px;
+}
+main .content .factions .faction-gallery .faction-info .faction-description {
+  height: 200px;
+  width: 400px;
+  border: 1px solid white;
+  padding: 8px;
+}
+main .content .factions .faction-gallery .headshot {
+  height: 200px;
+  width: 100%;
+  border: 1px solid seagreen;
+  margin-left: 400px;
+  padding: 15px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

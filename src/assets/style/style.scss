@@ -43,11 +43,6 @@ p, li{
         background-size: cover;
         background-position: center;
 
-        --mask: linear-gradient(to bottom, 
-      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 98%, 
-      rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
-  ) 50% 10% / 100% 100% repeat-x;
-  
   font: 2em/1.6em Arial;
   -webkit-mask: var(--mask); 
   mask: var(--mask);
@@ -130,6 +125,9 @@ main{
                 border-bottom: 1px solid aliceblue;
                 text-transform: uppercase;
             }
+            a{
+                scroll-behavior: smooth;
+            }
         }
 
         .content{
@@ -138,13 +136,12 @@ main{
            display: block;
            overflow-y: scroll; 
            height:950px;
-    
-           div{
-            scroll-snap-type: y mandatory;
-           }
+           scroll-behavior: smooth;
 
         
             .synopsis{
+
+                margin-bottom:800px;
                /* From https://css.glass */
 
             border-radius: 4px;
@@ -220,63 +217,52 @@ main{
                         }
                     }
                 }
-                    
-                    
-}
+             }
+
+    .factions{
+        
+        border: 1px solid gold;
+        padding: 40px;
+        em{
+            color: aliceblue;
+        }
+        .faction-gallery{
+            display:  flex;
+
+            .faction-info{
+                display: block;
+
+                .contact-name{
+                    height: 80px;
+                    border: 1px solid saddlebrown;
+                    padding: 8px  
+                }
+
+                .faction-name{
+                    height: 140px;
+                    width: 400px;
+                    border: 1px solid white;
+                    padding: 8px;
+                }
+                
+                .faction-description{
+                    height: 200px;
+                    width: 400px;
+                    border: 1px solid white;
+                    padding: 8px;
+                }
+            }
+
+            .headshot{
+                height: 200px;
+                width: 100%;
+                border: 1px solid seagreen;
+                margin-left: 400px;
+                padding: 15px;
+                text-align: center;
+
+            }
         }
     }
-    //
-    //  $finalHeight: 500px;
-    // $finalWidth: 500px;
-    // $scrollBarHeight: 0.5px;
-    
-    // ::-webkit-scrollbar {
-    //   width: $scrollBarHeight;
-    //   height: $scrollBarHeight;
-    // }
-    
-    // ::-webkit-scrollbar-button {
-    //   width: $scrollBarHeight;
-    //   height: $scrollBarHeight;
-    // }
-    
-    
-    // div {
-    //   box-sizing: border-box;
-    // }
-
-
-    // .horizontal-scroll-wrapper {
-    //   display: block;
-    //   top: 0;
-    //   left: 0;
-    //   width: calc(#{$finalHeight} + #{$scrollBarHeight});
-    //   max-height: $finalHeight;
-    //   margin: 0;
-    //   padding-top: $scrollBarHeight;
-    //   overflow-y: auto;
-    //   overflow-x: hidden;
-    //   transform: rotate(-90deg) translateY(-$finalHeight);
-    //   transform-origin: right top;
-    //   background-color: #c917009c;
-    //   & > div {
-    //     display: block;
-    //     padding-left: 40px;
-    //     padding-top: 25px;
-    //     padding-bottom: 40px;
-    //     transform: rotate(90deg);
-    //     transform-origin: right top;
-    //   }
-    // }
-
-    
-    // .squares {
-    //     margin-left: 180%;
-    //   padding: $finalHeight 0 0 0;
-    //   & > div {
-    //     width: $finalHeight;
-    //     height: $finalHeight;
-    //     margin: 10px 0;
-    //   }
-    // }s
-    // }
+        }
+    }

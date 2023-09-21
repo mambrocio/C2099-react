@@ -4,11 +4,9 @@ function SideNav(){
             <div className="side-nav">
                 <nav>
                 <ul>
-                <li><a href="#">Synopsis</a></li>
+                <li><a href="#synopAnchor">Synopsis</a></li>
 
-                <li><a href="#">Foundations</a></li>
-                
-                <li><a href="#">Factions</a></li>
+                <li><a href="#factionAnchor">Factions</a></li>
 
                 <li><a href="#">Laws</a></li>
 

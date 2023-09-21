@@ -2,18 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/style/style.css';
 import Header from './structure/Header';
+import Video from './components/Video';
 import Main from './structure/Main';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header/>
-    <div className="video-placer">
-           <video className="video-intro" autoPlay loop>
-            <source src="/assets/video/testIntro.mp4" type="video/mp4"/>
-           </video>
-        </div>
+    <Video/>
     <Main/>
   </React.StrictMode>
 );
